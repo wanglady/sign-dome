@@ -29,16 +29,16 @@ export default {
 <style lang="less" scoped>
 .insured-personal {
   width: 100%;
+  min-height: calc(100vh - 237px);
   .insured-con {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 70px 0 140px 0;
     div {
       font-size: 16px;
       color: #333333;
-      margin-bottom: 36px;
+      margin: 30px;
     }
     img {
       width: 222px;

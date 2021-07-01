@@ -194,8 +194,8 @@ export default {
       )
       this.liveForm = {
         ...useInfo,
-        branch: '测试市分局',
-        acceptance: '测试市分局测试路派出所',
+        branch: '测试市',
+        acceptance: '测试路派出所',
         customerType: '1',
       }
     },
@@ -215,19 +215,24 @@ export default {
             url: '/test',
             method: 'POST',
             data: this.liveForm,
-          }).then(res => {
-            sessionStorage.setItem('signUrl', res.data)
           })
+            .then(() => {
+              sessionStorage.setItem('signUrl', window.location.href)
+            })
+            .catch(() => {
+              sessionStorage.setItem('signUrl', window.location.href)
+              window.location.href = `${window.location.href}?fildId=useInfo`
+            })
         }
       })
     },
     getSignFile() {
-      const signUrl = sessionStorage.getItem('signUrl')
-      const useInfo = sessionStorage.getItem('useInfo')
-      window.location.href = `${signUrl}&info=${useInfo}`
+      console.log('查看文件')
     },
     onSubmitFinish() {
-      window.location.href = 'https://ggfwdemo.esign.cn/PersonalService.html'
+      this.$router.push({
+        path: 'insuredPersonal',
+      })
     },
   },
 }
@@ -236,6 +241,7 @@ export default {
 <style lang="less" scoped>
 .live-personal {
   width: 100%;
+  min-height: calc(100vh - 237px);
   .content-form {
     display: flex;
     align-items: center;

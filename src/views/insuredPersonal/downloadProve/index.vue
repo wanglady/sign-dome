@@ -37,5 +37,6 @@ export default {
 <style lang="less" scoped>
 .download-prove {
   width: 100%;
+  min-height: calc(100vh - 237px);
 }
 </style>
