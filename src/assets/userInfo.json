@@ -1,0 +1,35 @@
+{
+  "docs": [
+    {
+      "docFilekey": "",
+      "docName": "文件.pdf",
+      "docPwd": ""
+    }
+  ],
+  "signFiles": [
+    {
+      "docFilekey": "",
+      "signPos": [{ "signType": "0", "addSignTime": false }]
+    }
+  ],
+  "file": {
+    "alias": "别名",
+    "fileBase64": "",
+    "fileFormat": "PDF",
+    "fileKey": "",
+    "fileName": "文档"
+  },
+  "pos": {
+    "posPage": 1,
+    "posType": "Single",
+    "posX": 0,
+    "posY": 0
+  },
+  "signer": {
+    "accountId": "",
+    "accountType": "Department",
+    "certId": 0,
+    "departmentId": "",
+    "sealId": 0
+  }
+}
